@@ -1,0 +1,68 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.app {
+  padding: 50px;
+}
+
+.app-header {
+  margin-bottom: 30px;
+}
+.app-header h1 {
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+label { 
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.repo-input {
+  width: 20%;
+  height: 2rem;
+  border-radius: 4px;
+  font-size: 1.4rem;
+}
+
+.user-repo {
+  margin: 0 0 20px 0;
+}
+
+.repos {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination li {
+  margin: 50px 5px;
+}
+
+.current a {
+  text-decoration: none;
+}
+
+/*Table CSS*/
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
