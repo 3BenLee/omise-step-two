@@ -2,21 +2,30 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+main {
+  text-align: center;
+}
+
 .app {
-  padding: 50px;
+  padding: 0;
 }
 
 .app-header {
   margin-bottom: 30px;
+  text-align: center;
 }
 .app-header h1 {
+  background-color: #dddddd;
   margin-bottom: 30px;
+  color: #6e5773;
   font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
 }
 
 label { 
   font-size: 1.7rem;
   font-weight: 700;
+  color: #6e5773;
 }
 
 .repo-input {
@@ -26,8 +35,27 @@ label {
   font-size: 1.4rem;
 }
 
+.search-button {
+  width: 200px;
+  margin-left: 50px;
+  padding: 3px;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  background-color: #dddddd;
+  color: #6e5773;
+  outline: none;
+}
+
+.search-button:hover {
+  background-color: darkgrey;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
 .user-repo {
   margin: 0 0 20px 0;
+  color: #6e5773;
 }
 
 .repos {
@@ -37,6 +65,7 @@ label {
 
 .pagination {
   display: flex;
+  margin-left: 140px;
 }
 
 .pagination li {
@@ -50,9 +79,11 @@ label {
 /*Table CSS*/
 
 table {
+
+  margin: 0 auto;
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -61,6 +92,7 @@ td, th {
   text-align: left;
   padding: 8px;
   font-family: 'Montserrat', sans-serif;
+  color: #6e5773;
 }
 
 tr:nth-child(even) {

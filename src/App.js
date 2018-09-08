@@ -99,7 +99,7 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
-          <h1>Github API Sample</h1>
+          <h1>Github Repo Finder</h1>
           <form onSubmit={this.search}>
             <label>user: <input className="repo-input" name="user" defaultValue={this.state.user} /></label>
             <input className="search-button" type="submit" value="search repos" />
