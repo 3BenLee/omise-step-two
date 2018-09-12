@@ -21,8 +21,12 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const {user: prevUser, page: prevPage} = prevProps.match.params
-    const {user, page} = this.props.match.params
+    const prevUser = prevProps.match.params.user
+    const prevPage = prevProps.match.params.page
+
+    const user = this.props.match.params.user
+    const page = this.props.match.params.page
+    
     if(prevUser !== user || prevPage !== page) {
       if(user && page) {
         this.setState({loading: true})
@@ -38,8 +42,6 @@ class App extends Component {
             } 
             res.json().then(repos => {
               this.setState({repos, lastPage, user, page: page * 1, loading: false})
-              //alert(repos[0].id)
-
             })
           })
       } else {
@@ -58,6 +60,7 @@ class App extends Component {
   }
 
   render() {
+    // Get repo data and add it to the table
     const repos = this.state.repos.map((repo, i) => 
      <tr >
    <td key={i}>
@@ -72,6 +75,7 @@ class App extends Component {
      </tr>
     )
 
+    // Paginations
     const baseUrl = `/${this.state.user}/`
     const paginations = []
     for(let i = 1, l = this.state.lastPage; i <= l; i++) {
