@@ -63,10 +63,10 @@ class App extends Component {
     // Get repo data and add it to the table
     const repos = this.state.repos.map((repo, i) => 
      <tr >
-   <td key={i}>
+      <td key={i}>
         <a href={repo.html_url} target="_blank">{repo.name}</a>
       </td>
-        <td key={i}>
+      <td key={i}>
         {repo.id}
       </td>
       <td key={i}>
@@ -77,6 +77,9 @@ class App extends Component {
 
     // Paginations
     const baseUrl = `/${this.state.user}/`
+    // The previous line is a shortcut for the following:
+    //const baseUrl = '/' + this.state.user + '/'
+
     const paginations = []
     for(let i = 1, l = this.state.lastPage; i <= l; i++) {
       paginations.push(
